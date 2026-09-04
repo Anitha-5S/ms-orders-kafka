@@ -1,0 +1,144 @@
+{
+  "c2code": "121212",
+  "c_br_code": "000",
+  "data": {
+    "mst": {
+      "t_source_timestamp": "2020-06-29 13:04:17",
+      "n_item_total": "105.50",
+      "n_discount_amount": "0.0",
+      "n_delivery_charge": "10.0",
+      "n_net_payable_amount": "115.5",
+      "d_order_expiry_date": "2020-07-10",
+      "c_payment_ref_id": "",
+      "c_ref_order_no": "9817263540",
+      "c_order_status": "I",
+      "c_cancel_flag": "no",
+      "n_delivery_pickup_flag": "no",
+      "n_partial_order_flag": "no",
+      "c_cust_code": "001003",
+      "c_sman_code": "",
+      "c_user_type_flag": "no",
+      "c_rep_flag": "no",
+      "c_note": "master note",
+      "c_order_feedback": "it is perfect order",
+      "c_invoice_ref_no": "",
+      "t_invoice_timestamp": ""
+    },
+    "det": [
+      {
+        "c_item_code": "001203",
+        "n_qty": "10",
+        "n_mrp": "12.55",
+        "n_actual_rate": "0",
+        "n_sale_rate": "10.55",
+        "n_disc_percentage": "0",
+        "n_disc_amount": "0",
+        "n_scheme_qty": "0",
+        "n_scheme_per": "0",
+        "n_item_total": "105.50",
+        "c_rate_consider_flag": "no",
+        "c_user_flag": "no",
+        "c_cancel_flag": "no",
+        "c_note": "item 1",
+        "c_buyer_itemcode": "ITM001",
+        "c_buyer_item_name": "dummy item1"
+      },
+      {
+        "c_item_code": "001233",
+        "n_qty": "10",
+        "n_mrp": "22.55",
+        "n_actual_rate": "0",
+        "n_sale_rate": "20.55",
+        "n_disc_percentage": "0",
+        "n_disc_amount": "0",
+        "n_scheme_qty": "0",
+        "n_scheme_per": "0",
+        "n_item_total": "205.50",
+        "c_rate_consider_flag": "no",
+        "c_user_flag": "no",
+        "c_cancel_flag": "no",
+        "c_note": "item 2",
+        "c_buyer_itemcode": "ITM002",
+        "c_buyer_item_name": "dummy item2"
+      }
+    ],
+    "payment": {
+      "c_payment_ref_code": "xyxssd",
+      "c_payment_status": "pending",
+      "c_payment_type": "UPI",
+      "c_transaction_type": ""
+    },
+    "shipping": {
+      "c_code": "S001",
+      "c_mode": "qq",
+      "c_note": "shipping Note",
+      "c_status": "I",
+      "c_name": "yyyy",
+      "contact": {
+        "c_address_1": "aaaaaaaa",
+        "c_address_2": "qqqqqqqq",
+        "c_alternative_mobile_no": "1111111111",
+        "c_alternative_email_id": "dummy@gmail.com",
+        "c_alternative_phone_no": "3333333333",
+        "c_city": "bengaluru",
+        "c_contact_name": "Ronald",
+        "c_country": "INDIA",
+        "c_email_id": "cr7@gmail.com",
+        "c_mobile_no": "2222222222",
+        "c_note": "contact details note",
+        "c_phone_no": "9999999999",
+        "c_pin": "560040",
+        "c_state": "KA"
+      }
+    },
+    "delivery": {
+      "c_code": "001203",
+      "c_mode": "xyz",
+      "c_name": "Cris",
+      "c_note": "delivery note",
+      "c_status": "I",
+      "contact": {
+        "c_address_1": "aaaaaaaa",
+        "c_address_2": "qqqqqqqq",
+        "c_alternative_mobile_no": "1111111111",
+        "c_alternative_email_id": "dummy@gmail.com",
+        "c_alternative_phone_no": "3333333333",
+        "c_city": "bengaluru",
+        "c_contact_name": "Ronald",
+        "c_country": "INDIA",
+        "c_email_id": "cr7@gmail.com",
+        "c_mobile_no": "2222222222",
+        "c_note": "contact details note",
+        "c_phone_no": "9999999999",
+        "c_pin": "560040",
+        "c_state": "KA"
+      }
+    },
+    "prescription": {
+      "c_patient_name": "naveen kumar",
+      "c_doctor_name": "selva kumar",
+      "contact": {
+        "c_address_1": "aaaaaaaa",
+        "c_address_2": "qqqqqqqq",
+        "c_alternative_mobile_no": "1111111111",
+        "c_alternative_email_id": "dummy@gmail.com",
+        "c_alternative_phone_no": "3333333333",
+        "c_city": "bengaluru",
+        "c_contact_name": "Ronald",
+        "c_country": "INDIA",
+        "c_email_id": "cr7@gmail.com",
+        "c_mobile_no": "2222222222",
+        "c_note": "contact details note",
+        "c_phone_no": "9999999999",
+        "c_pin": "560040",
+        "c_state": "KA"
+      },
+      "d_prescription_expiry_date": "2020-07-29",
+      "prescription_docs": [
+        {
+          "c_url": "https://www.google.com/imghp"
+        }
+      ]
+    }
+  }
+}

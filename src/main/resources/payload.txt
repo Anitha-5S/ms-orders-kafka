@@ -1,0 +1,60 @@
+{
+ "bot_order_id":"",
+ "patientName":"",
+ "billNo":"",
+ "billDate":"",
+ "doctorName":"",
+ "total":"",
+ "itemDetails":[
+  {
+   "itemCode":"",
+   "batchNo":"",
+   "expiryDate":"",
+   "rate":"",
+   "quantity":"",
+   "tax":"",
+  },
+  {
+   "itemCode":"",
+   "batchNo":"",
+   "expiryDate":"",
+   "rate":"",
+   "quantity":"",
+   "tax":"",
+  }
+ ]
+}
+----------------------------
+{
+ "orderNo":"",
+ "orderDate":"",
+ "billedName":"",
+ "billedAddress":"",
+ "mobile_no":"",
+ "paymentDetails":"",
+ "ShippedName":"",
+ "ShippedAddress":"",
+ "itemDetails":[
+  {
+   "itemName":"",
+   "batchNo":"",
+   "expiryDate":"",
+   "rate":"",
+   "quantity":"",
+   "tax":"",
+   "total":"",
+  },
+  {
+   "itemCode":"",
+   "batchNo":"",
+   "expiryDate":"",
+   "rate":"",
+   "quantity":"",
+   "tax":"",
+   "total":"",
+  }
+ ],
+ "subTotal":"",
+ "shippingCharges":"",
+ "total":"",
+}

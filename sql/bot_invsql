@@ -1,0 +1,56 @@
+-- order_buk_new.bot_inv_mst definition
+
+CREATE TABLE `bot_inv_mst` (
+  `c_ucode` varchar(16) NOT NULL COMMENT 'Retailer u_code',
+  `n_year` int(11) NOT NULL COMMENT 'Financial year',
+  `c_invoice_number` varchar(32) NOT NULL COMMENT 'Customer invoice number',
+  `c_order_id` varchar(16) NOT NULL COMMENT 'Order number',
+  `c_phone_number` varchar(16) NOT NULL COMMENT 'Customer phone number',
+  `c_name` varchar(128) NOT NULL COMMENT 'Customer name',
+  `c_address` varchar(512) NOT NULL COMMENT 'Delivery address',
+  `n_pincode` int(11) NOT NULL COMMENT 'Delivery pincode',
+  `n_item_count` smallint(6) NOT NULL COMMENT 'Total number of items in the order',
+  `n_cgst_amount` decimal(10,2) NOT NULL COMMENT 'Total order CGST amount',
+  `n_sgst_amount` decimal(10,2) NOT NULL COMMENT 'Total order SGST amount',
+  `n_igst_amount` decimal(10,2) NOT NULL COMMENT 'Total order IGST amount',
+  `n_discount_amount` decimal(10,2) NOT NULL COMMENT 'Total order discount amount',
+  `n_delivery_charges` decimal(10,2) NOT NULL COMMENT 'Delivery charges',
+  `n_total_amount` decimal(10,2) NOT NULL COMMENT 'Total order amount',
+  `n_net_amount` decimal(10,2) NOT NULL COMMENT 'Total order net payable amount',
+  `t_invoice_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Timestamp when the order was created',
+  `c_delivery_type` varchar(1) DEFAULT NULL COMMENT 'P-Pickup, D-Delivery, C-Courier',
+  `c_order_id_ref` varchar(16) DEFAULT NULL COMMENT 'System invoice number',
+  `c_prescription_url` varchar(2048) DEFAULT NULL COMMENT 'URL of the prescription image storage',
+  `c_invoice_url` varchar(2048) DEFAULT NULL COMMENT 'Invocie url',
+  `c_doctor_name` varchar(100) DEFAULT NULL COMMENT 'Doctor name',
+  `c_patient_name` varchar(100) DEFAULT NULL COMMENT 'Patient name',
+  PRIMARY KEY (`c_ucode`,`n_year`,`c_invoice_number`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+-- order_buk_new.bot_inv_det definition
+
+CREATE TABLE `bot_inv_det` (
+  `c_ucode` varchar(16) NOT NULL COMMENT 'Retailer u_code',
+  `n_year` int(11) NOT NULL COMMENT 'Financial year',
+  `c_invoice_number` varchar(32) NOT NULL COMMENT 'Invoice serial number',
+  `n_seq` int(11) NOT NULL COMMENT 'Retailer u_code',
+  `c_item_code` varchar(16) NOT NULL COMMENT 'Item code',
+  `c_item_name` varchar(100) NOT NULL COMMENT 'Item name',
+  `c_batch_number` varchar(16) NOT NULL COMMENT 'Batch number',
+  `d_expiry_date` date NOT NULL COMMENT 'Expiry Date',
+  `n_qty` smallint(6) NOT NULL COMMENT 'Item quantity',
+  `n_mrp` decimal(10,2) NOT NULL COMMENT 'MRP amount',
+  `n_cgst_percentage` decimal(5,2) NOT NULL COMMENT 'CGST %',
+  `n_cgst_amount` decimal(10,2) NOT NULL COMMENT 'CGST amount',
+  `n_sgst_percentage` decimal(5,2) NOT NULL COMMENT 'SGST %',
+  `n_sgst_amount` decimal(10,2) NOT NULL COMMENT 'SGST amount',
+  `n_igst_percentage` decimal(5,2) NOT NULL COMMENT 'IGST %',
+  `n_igst_amount` decimal(10,2) NOT NULL COMMENT 'IGST amount',
+  `n_discount_percentage` decimal(5,2) NOT NULL COMMENT 'Discount %',
+  `n_discount_amount` decimal(10,2) NOT NULL COMMENT 'Total discount amout',
+  `n_total_amount` decimal(10,2) NOT NULL COMMENT 'Total amount',
+  `n_net_amount` decimal(10,2) NOT NULL COMMENT 'Net payable amount',
+  PRIMARY KEY (`c_ucode`,`n_year`,`c_invoice_number`,`n_seq`),
+  CONSTRAINT `bot_inv_det_FK` FOREIGN KEY (`c_ucode`, `n_year`, `c_invoice_number`) REFERENCES `bot_inv_mst` (`c_ucode`, `n_year`, `c_invoice_number`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
